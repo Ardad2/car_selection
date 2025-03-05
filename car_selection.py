@@ -12,3 +12,18 @@ import pandas as pd
 df = pd.read_csv("car_search.csv")
 
 df.head()
+
+import matplotlib.pyplot as plt
+
+# Create the scatter plot
+plt.figure(figsize=(16, 10))
+plt.scatter(df["Mileage"], df["Price"], alpha=0.5, c="blue", edgecolors="black")
+
+# Labels and title
+plt.xlabel("Mileage")
+plt.ylabel("Price")
+plt.title("Price vs Mileage")
+plt.grid(True)
+
+# Show plot
+plt.show()
